@@ -9,10 +9,9 @@ import TodoCard from "@/components/dashboard/TodoCard.vue";
     <!---First Row -->
     <!-- ---------------------------------------------- -->
     <v-row class="flex-0" dense>
-      <v-col cols="12" xl="4">
+      <v-col cols="12" xl="12">
         <!-- Sales Card -->
-        <v-card class="card-shadow" height="420">
-          <!-- <sales-card></sales-card> -->
+        <v-card class="card-shadow" height="375">
           <sales-card
             :value="1837.32"
             class="h-100"
@@ -34,17 +33,15 @@ import TodoCard from "@/components/dashboard/TodoCard.vue";
           ><todo-card></todo-card
         ></v-card>
       </v-col>
-    </v-row>
-    <!-- ---------------------------------------------- -->
-    <!---Third Row -->
-    <!-- ---------------------------------------------- -->
-    <v-row class="card-shadow flex-grow-0" dense>
       <v-col cols="12" xl="6">
         <v-card class="card-shadow" height="420"
           ><tickets-card></tickets-card>
         </v-card>
       </v-col>
     </v-row>
+    <!-- ---------------------------------------------- -->
+    <!---Third Row -->
+    <!-- ---------------------------------------------- -->
   </div>
 </template>
 <style lang="scss" scoped></style>
