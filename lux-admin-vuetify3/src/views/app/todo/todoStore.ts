@@ -23,55 +23,6 @@ const todos = [
     completed: false,
     tags: ["work"],
   },
-  {
-    id: 4,
-    title: "Take a walk",
-    detail: "Explore the park and enjoy the nature",
-    completed: false,
-    tags: ["relaxation"],
-  },
-  {
-    id: 5,
-    title: "Meditate",
-    detail: "Practice mindfulness for 15 minutes",
-    completed: true,
-    tags: ["relaxation"],
-  },
-  {
-    id: 6,
-    title: "Watch a movie",
-    detail: "Stream a comedy to lighten the mood",
-    completed: true,
-    tags: ["relaxation"],
-  },
-  {
-    id: 7,
-    title: "Buy groceries",
-    detail: "Stock up on fruits, vegetables, and snacks",
-    completed: true,
-    tags: ["shopping"],
-  },
-  {
-    id: 8,
-    title: "Shop for clothes",
-    detail: "Look for a new outfit for the weekend",
-    completed: false,
-    tags: ["shopping"],
-  },
-  {
-    id: 9,
-    title: "Order supplies",
-    detail: "Get some office essentials for the team",
-    completed: false,
-    tags: ["shopping", "relaxation"],
-  },
-  {
-    id: 10,
-    title: "Buy gifts",
-    detail: "Get presents for friends and family",
-    completed: false,
-    tags: ["shopping", "relaxation"],
-  },
 ];
 
 export const useTodoStore = defineStore({
