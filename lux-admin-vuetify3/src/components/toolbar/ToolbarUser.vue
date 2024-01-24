@@ -23,45 +23,11 @@ const navs = [
     link: "/profile",
     icon: "mdi-account-box-outline",
   },
-  {
-    title: "Plans and Billing",
-    key: "menu.plansAndBilling",
-    link: "/plans-and-billing",
-    icon: "mdi-credit-card-outline",
-  },
-  {
-    title: "Team",
-    key: "menu.team",
-    link: "/team",
-    icon: "mdi-account-group-outline",
-  },
-  {
-    title: "API Dashboard",
-    key: "menu.apiDashboard",
-    link: "/api-dashboard",
-    icon: "mdi-monitor-dashboard",
-  },
-  {
-    title: "Integrations",
-    key: "menu.integrations",
-    link: "/integrations",
-    icon: "mdi-puzzle-outline",
-  },
-  {
-    title: "Ask the Community",
-    key: "menu.askCommunity",
-    link: "/ask-the-community",
-    icon: "mdi-help-circle-outline",
-  },
 ];
 </script>
 
 <template>
-  <v-menu
-    :close-on-content-click="false"
-    location="bottom right"
-    transition="slide-y-transition"
-  >
+  <v-menu :close-on-content-click="false" location="bottom right" transition="slide-y-transition">
     <!-- ---------------------------------------------- -->
     <!-- Activator Btn -->
     <!-- ---------------------------------------------- -->
@@ -70,8 +36,7 @@ const navs = [
         <v-badge content="2" color="success" dot bordered>
           <v-avatar size="40">
             <v-img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"
-            ></v-img>
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"></v-img>
           </v-avatar>
         </v-badge>
       </v-btn>
@@ -85,8 +50,7 @@ const navs = [
           <template v-slot:prepend>
             <v-avatar size="40">
               <v-img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"
-              ></v-img>
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"></v-img>
             </v-avatar>
           </template>
 
@@ -95,8 +59,7 @@ const navs = [
             <StatusMenu />
           </v-list-item-title>
           <v-list-item-subtitle>
-            <!-- {{ $store.state.user.email  }} -->
-            yjkbako@gmail.com
+            amosliang77@gmail.com
           </v-list-item-subtitle>
         </v-list-item>
       </v-list>
@@ -106,14 +69,7 @@ const navs = [
       <!-- ---------------------------------------------- -->
 
       <v-list variant="flat" elevation="0" :lines="false" density="compact">
-        <v-list-item
-          color="primary"
-          v-for="(nav, i) in navs"
-          :key="i"
-          :to="nav.link"
-          link
-          density="compact"
-        >
+        <v-list-item color="primary" v-for="(nav, i) in navs" :key="i" :to="nav.link" link density="compact">
           <template v-slot:prepend>
             <v-avatar size="30">
               <v-icon>{{ nav.icon }}</v-icon>
@@ -145,12 +101,7 @@ const navs = [
             </v-list-item-subtitle>
           </div>
         </v-list-item>
-        <v-list-item
-          color="primary"
-          link
-          @click="handleLogout"
-          density="compact"
-        >
+        <v-list-item color="primary" link @click="handleLogout" density="compact">
           <template v-slot:prepend>
             <v-avatar size="30">
               <v-icon>mdi-logout</v-icon>

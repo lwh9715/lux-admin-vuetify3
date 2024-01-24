@@ -6,9 +6,8 @@ export const useProfileStore = defineStore({
     basic: {
       username: "shirabako",
       realname: "yang J. K.",
-      email: "yjkabko@gmail.com",
-      avatar:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s",
+      email: "amosliang77@gmail.com",
+      avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s",
       location: "Tokyo,Japan",
       role: "Admin",
       disabled: false,

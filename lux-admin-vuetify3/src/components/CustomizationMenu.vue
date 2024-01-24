@@ -161,7 +161,7 @@ const updatePrimaryColor = (newColor: Color) => {
         </div>
         <div class="ml-5 mt-5 d-flex align-center">
           <v-icon color="primary" class="mr-6">mdi-email-outline</v-icon>
-          <a href="mailto:yjkbako@gmail.com">yjkbako@gmail.com</a>
+          <a href="mailto:amosliang77@gmail.com">amosliang77@gmail.com</a>
         </div>
         <div>
           <img src="@/assets/wechat.jpg" alt="" />

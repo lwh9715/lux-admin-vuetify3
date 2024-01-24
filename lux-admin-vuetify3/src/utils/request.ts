@@ -1,0 +1,66 @@
+import axios from 'axios';
+import Config from './config'
+
+//创建实例
+const user_request = axios.create({
+  baseURL: Config.USER_DATA_URL,
+});
+
+const hotspot_request = axios.create({
+  baseURL: Config.HOTSPOT_DATA_URL,
+});
+
+const backyard_request = axios.create({
+  baseURL: Config.BACKYARD_DATA_URL,
+});
+
+let reqTime = 0
+let cookieArr = document.cookie ? document.cookie.split(';') : new Array();
+let cookieObj = {}
+cookieArr.forEach(item => {
+  let objVal = item.split('=')
+  cookieObj[objVal[0]] = objVal[1]
+})
+
+function requestFunc(request) {
+
+  // 请求拦截器,在请求头加token
+  request.interceptors.request.use(
+    // 成功,返回出去
+    config => {
+      if (window.localStorage.getItem('Authorization')) {
+        config.headers.AuthToken = window.localStorage.getItem('Authorization');
+      }
+      if (cookieObj['AuthToken']) {
+        config.headers['AuthToken'] = cookieObj['AuthToken']
+      }
+      // 请求数加1
+      reqTime++
+      return config;
+    },
+    //失败,拒绝
+    error => {
+      console.log(error);
+      return Promise.reject();
+    }
+  );
+  //响应拦截器
+  request.interceptors.response.use(
+    response => {
+      if (response.status === 200) {
+        return response.data;
+      } else {
+        Promise.reject();
+      }
+    },
+    error => {
+      console.log(error);
+      return Promise.reject();
+    }
+  );
+}
+
+requestFunc(user_request)
+requestFunc(hotspot_request)
+requestFunc(backyard_request)
+export { user_request, hotspot_request, backyard_request };

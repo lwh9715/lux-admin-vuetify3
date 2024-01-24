@@ -11,6 +11,7 @@ interface Profile {
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
+    proxyUrl: "https://42.192.139.14",
     isLoggedIn: false,
     user: null,
     profile: null as Profile | null,

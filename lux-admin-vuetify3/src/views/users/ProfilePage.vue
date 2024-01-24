@@ -113,106 +113,26 @@ Basic with Icons
             <v-row>
               <v-col cols="12" sm="6">
                 <v-label class="font-weight-medium mb-2">Username</v-label>
-                <v-text-field
-                  v-model="basic.username"
-                  color="primary"
-                  variant="outlined"
-                  density="compact"
-                  type="text"
-                  placeholder="John Deo"
-                  hide-details
-                />
+                <v-text-field v-model="basic.username" color="primary" variant="outlined" density="compact" type="text"
+                  placeholder="John Deo" hide-details />
               </v-col>
               <v-col cols="12" sm="6">
                 <v-label class="font-weight-medium mb-2">Realname</v-label>
-                <v-text-field
-                  v-model="basic.realname"
-                  color="primary"
-                  variant="outlined"
-                  density="compact"
-                  type="text"
-                  placeholder="John Deo"
-                  hide-details
-                />
+                <v-text-field v-model="basic.realname" color="primary" variant="outlined" density="compact" type="text"
+                  placeholder="John Deo" hide-details />
               </v-col>
               <v-col cols="12" sm="6">
                 <v-label class="font-weight-medium mb-2">Email</v-label>
-                <v-text-field
-                  class="bg-blue-grey-lighten-5"
-                  readonly
-                  v-model="basic.email"
-                  color="primary"
-                  variant="outlined"
-                  density="compact"
-                  type="text"
-                  placeholder="John Deo"
-                  hide-details
-              /></v-col>
+                <v-text-field class="bg-blue-grey-lighten-5" readonly v-model="basic.email" color="primary"
+                  variant="outlined" density="compact" type="text" placeholder="John Deo" hide-details /></v-col>
             </v-row>
           </v-card-text>
           <v-divider></v-divider>
           <v-card-actions class="pa-5">
             <v-spacer></v-spacer>
-            <v-btn
-              class="px-5"
-              color="primary"
-              elevation="1"
-              variant="elevated"
-            >
-              Unpdate Basic Info</v-btn
-            >
+            <v-btn class="px-5" color="primary" elevation="1" variant="elevated">
+              Unpdate Basic Info</v-btn>
           </v-card-actions>
-        </v-card>
-
-        <!-- ---------------------------------------------- -->
-        <!--   Authentication  -->
-        <!-- ---------------------------------------------- -->
-        <v-card class="mb-5">
-          <v-card-title class="bg-white py-4 font-weight-bold">
-            Authentication</v-card-title
-          >
-          <v-divider></v-divider>
-          <v-card-text class="pa-7">
-            <v-row>
-              <v-col cols="12" md="6">
-                <v-btn
-                  color="primary"
-                  size="large"
-                  block
-                  elevation="1"
-                  variant="elevated"
-                >
-                  <Icon
-                    icon="logos:google-icon"
-                    class="mr-3 my-2"
-                  />Google</v-btn
-                >
-              </v-col>
-
-              <v-col cols="12" md="6">
-                <v-btn size="large" block variant="outlined" disabled>
-                  <Icon
-                    icon="logos:facebook"
-                    class="mr-3 my-2"
-                  />Facebook</v-btn
-                >
-              </v-col>
-
-              <v-col cols="12" md="6">
-                <v-btn size="large" block variant="outlined" disabled>
-                  <Icon
-                    icon="logos:github-icon"
-                    class="mr-3 my-2"
-                  />Github</v-btn
-                >
-              </v-col>
-              <v-col cols="12" md="6">
-                <v-btn size="large" block variant="outlined" disabled>
-                  <Icon icon="logos:twitter" class="mr-3 my-2" />Twitter</v-btn
-                >
-              </v-col>
-            </v-row>
-          </v-card-text>
         </v-card>
 
         <!-- ---------------------------------------------- -->
@@ -226,81 +146,77 @@ Basic with Icons
           <v-card-text class="pa-7">
             <v-row>
               <v-col cols="12" sm="6">
-                <v-label class="font-weight-medium mb-2"
-                  >Current Password</v-label
-                >
-                <v-text-field
-                  readonly
-                  v-model="passwords.currentPassword"
-                  class="bg-blue-grey-lighten-5"
-                  density="compact"
-                  color="primary"
-                  variant="outlined"
-                  :type="currentPasswordShow ? 'text' : 'password'"
-                  placeholder="Current Password"
-                  hide-details
-                  :append-inner-icon="
-                    currentPasswordShow ? 'mdi-eye' : 'mdi-eye-off'
-                  "
-                  @click:append-inner="
-                    currentPasswordShow = !currentPasswordShow
-                  "
-                >
+                <v-label class="font-weight-medium mb-2">Current Password</v-label>
+                <v-text-field readonly v-model="passwords.currentPassword" class="bg-blue-grey-lighten-5"
+                  density="compact" color="primary" variant="outlined" :type="currentPasswordShow ? 'text' : 'password'"
+                  placeholder="Current Password" hide-details :append-inner-icon="currentPasswordShow ? 'mdi-eye' : 'mdi-eye-off'
+                    " @click:append-inner="
+    currentPasswordShow = !currentPasswordShow
+    ">
                 </v-text-field>
               </v-col>
               <v-col cols="12" sm="6"> </v-col>
               <v-col cols="12" sm="6">
                 <v-label class="font-weight-medium mb-2">Password</v-label>
-                <v-text-field
-                  v-model="passwords.newPassword"
-                  density="compact"
-                  color="primary"
-                  variant="outlined"
-                  :type="newPasswordShow ? 'text' : 'password'"
-                  placeholder="new password"
-                  hide-details
-                  :append-inner-icon="
-                    newPasswordShow ? 'mdi-eye' : 'mdi-eye-off'
-                  "
-                  @click:append-inner="newPasswordShow = !newPasswordShow"
-                >
+                <v-text-field v-model="passwords.newPassword" density="compact" color="primary" variant="outlined"
+                  :type="newPasswordShow ? 'text' : 'password'" placeholder="new password" hide-details
+                  :append-inner-icon="newPasswordShow ? 'mdi-eye' : 'mdi-eye-off'
+                    " @click:append-inner="newPasswordShow = !newPasswordShow">
                 </v-text-field>
               </v-col>
               <v-col cols="12" sm="6">
-                <v-label class="font-weight-medium mb-2"
-                  >Confirm Password</v-label
-                >
-                <v-text-field
-                  v-model="passwords.confirmPassword"
-                  density="compact"
-                  color="primary"
-                  variant="outlined"
-                  :type="confirmPasswordShow ? 'text' : 'password'"
-                  placeholder="confirm password"
-                  hide-details
-                  :append-inner-icon="
-                    confirmPasswordShow ? 'mdi-eye' : 'mdi-eye-off'
-                  "
-                  @click:append-inner="
-                    confirmPasswordShow = !confirmPasswordShow
-                  "
-                >
-                </v-text-field
-              ></v-col>
+                <v-label class="font-weight-medium mb-2">Confirm Password</v-label>
+                <v-text-field v-model="passwords.confirmPassword" density="compact" color="primary" variant="outlined"
+                  :type="confirmPasswordShow ? 'text' : 'password'" placeholder="confirm password" hide-details
+                  :append-inner-icon="confirmPasswordShow ? 'mdi-eye' : 'mdi-eye-off'
+                    " @click:append-inner="
+    confirmPasswordShow = !confirmPasswordShow
+    ">
+                </v-text-field></v-col>
             </v-row>
           </v-card-text>
           <v-divider></v-divider>
           <v-card-actions class="pa-5">
             <v-spacer></v-spacer>
-            <v-btn
-              class="px-5"
-              color="primary"
-              elevation="1"
-              variant="elevated"
-            >
-              Unpdate Password</v-btn
-            >
+            <v-btn class="px-5" color="primary" elevation="1" variant="elevated">
+              Unpdate Password</v-btn>
           </v-card-actions>
+        </v-card>
+
+
+        <!-- ---------------------------------------------- -->
+        <!--   Authentication  -->
+        <!-- ---------------------------------------------- -->
+        <v-card class="mb-5">
+          <v-card-title class="bg-white py-4 font-weight-bold">
+            Authentication</v-card-title>
+          <v-divider></v-divider>
+          <v-card-text class="pa-7">
+            <v-row>
+              <v-col cols="12" md="6">
+                <v-btn color="primary" size="large" block elevation="1" variant="elevated">
+                  <Icon icon="logos:google-icon" class="mr-3 my-2" />Google
+                </v-btn>
+              </v-col>
+
+              <v-col cols="12" md="6">
+                <v-btn size="large" block variant="outlined" disabled>
+                  <Icon icon="logos:facebook" class="mr-3 my-2" />Facebook
+                </v-btn>
+              </v-col>
+
+              <v-col cols="12" md="6">
+                <v-btn size="large" block variant="outlined" disabled>
+                  <Icon icon="logos:github-icon" class="mr-3 my-2" />Github
+                </v-btn>
+              </v-col>
+              <v-col cols="12" md="6">
+                <v-btn size="large" block variant="outlined" disabled>
+                  <Icon icon="logos:twitter" class="mr-3 my-2" />Twitter
+                </v-btn>
+              </v-col>
+            </v-row>
+          </v-card-text>
         </v-card>
 
         <!-- ---------------------------------------------- -->
@@ -308,40 +224,23 @@ Basic with Icons
         <!-- ---------------------------------------------- -->
         <v-card class="mb-5">
           <v-card-title class="bg-white py-4 font-weight-bold">
-            Notifications</v-card-title
-          >
+            Notifications</v-card-title>
           <v-divider></v-divider>
           <v-card-text class="pa-7">
             <div>
-              <v-switch
-                v-model="notifications.officialEmails"
-                color="primary"
-                class="mr-4"
-                hide-details
-                label=" Receive newsletters, promotions and news from lux"
-              ></v-switch>
+              <v-switch v-model="notifications.officialEmails" color="primary" class="mr-4" hide-details
+                label=" Receive newsletters, promotions and news from lux"></v-switch>
             </div>
             <div>
-              <v-switch
-                v-model="notifications.followerUpdates"
-                color="primary"
-                class="mr-4"
-                hide-details
-                label=" Notify me when someone I follow uploads new workx"
-              ></v-switch>
+              <v-switch v-model="notifications.followerUpdates" color="primary" class="mr-4" hide-details
+                label=" Notify me when someone I follow uploads new workx"></v-switch>
             </div>
           </v-card-text>
           <v-divider></v-divider>
           <v-card-actions class="pa-5">
             <v-spacer></v-spacer>
-            <v-btn
-              class="px-5"
-              color="primary"
-              elevation="1"
-              variant="elevated"
-            >
-              Unpdate Notifications</v-btn
-            >
+            <v-btn class="px-5" color="primary" elevation="1" variant="elevated">
+              Unpdate Notifications</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
