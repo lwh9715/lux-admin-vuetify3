@@ -2,15 +2,15 @@ import axios from 'axios';
 import Config from './config'
 
 //创建实例
-const user_request = axios.create({
+const userRequest = axios.create({
   baseURL: Config.USER_DATA_URL,
 });
 
-const hotspot_request = axios.create({
+const hotspotRequest = axios.create({
   baseURL: Config.HOTSPOT_DATA_URL,
 });
 
-const backyard_request = axios.create({
+const backyardRequest = axios.create({
   baseURL: Config.BACKYARD_DATA_URL,
 });
 
@@ -60,7 +60,7 @@ function requestFunc(request) {
   );
 }
 
-requestFunc(user_request)
-requestFunc(hotspot_request)
-requestFunc(backyard_request)
-export { user_request, hotspot_request, backyard_request };
+requestFunc(userRequest)
+requestFunc(hotspotRequest)
+requestFunc(backyardRequest)
+export { userRequest, hotspotRequest, backyardRequest };

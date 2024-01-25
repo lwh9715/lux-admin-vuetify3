@@ -1,15 +1,13 @@
 import unsplashRoutes from "@/views/app/unsplash/UnsplashRoutes";
 import todoRoutes from "@/views/app/todo/todoRoutes";
-import emailRoutes from "@/views/app/email/emailRoutes";
-
 
 export default [
-  {
+{
     path: "/apps/board",
     name: "app-board",
     component: () =>
       import(
-        /* webpackChunkName: "utility-board" */ "@/views/utility/BoardPage.vue"
+        /* webpackChunkName: "utility-board" */ "@/views/app/utility/BoardPage.vue"
       ),
     meta: {
       requiresAuth: true,
