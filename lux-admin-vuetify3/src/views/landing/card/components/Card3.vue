@@ -46,7 +46,7 @@
 <style scoped lang="scss">
 .card {
   max-width: 400px;
-  height: 600px;
+  height: 550px;
   position: relative;
   display: flex;
   justify-content: center;

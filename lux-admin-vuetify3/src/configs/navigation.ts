@@ -20,10 +20,6 @@ export default {
       ],
     },
     {
-      text: "chatgpt",
-      items: menuAi,
-    },
-    {
       text: "Apps",
       items: menuApps,
     },
@@ -33,20 +29,16 @@ export default {
     },
     {
       text: "Landing",
-      items: [
-        ...menuLanding,
-        // {
-        //   icon: "mdi-airplane-landing",
-        //   key: "menu.landingPage",
-        //   text: "Landing Page",
-        //   link: "/landing",
-        // },
-      ],
+      items: menuLanding
     },
     {
       text: "Charts",
       key: "menu.charts",
       items: menuCharts,
+    },
+    {
+      text: "chatgpt",
+      items: menuAi,
     },
     {
       text: "Pages",

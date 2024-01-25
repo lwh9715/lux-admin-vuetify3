@@ -40,7 +40,6 @@ function requestFunc(request) {
     },
     //失败,拒绝
     error => {
-      console.log(error);
       return Promise.reject();
     }
   );
