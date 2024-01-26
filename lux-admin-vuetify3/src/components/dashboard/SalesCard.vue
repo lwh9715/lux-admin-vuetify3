@@ -1,176 +1,62 @@
 <script lang="ts" setup>
-import moment from "moment";
-import { useTheme } from "vuetify";
-import { formatCurrency } from "@/utils/formatCurrency";
-import PercentTrend from "@/components/common/PercentTrend.vue";
+import { Icon } from "@iconify/vue";
 
-const formatDate = (date: string) => {
-  return date ? moment(date).format("D MMM") : "";
-};
-
-const props = defineProps({
-  value: {
-    type: Number,
-    default: 0,
+const earningCardsData = [
+  {
+    title: "Total Income",
+    img: "solar:bill-line-duotone",
+    number: "3233",
   },
-  percentage: {
-    type: Number,
-    default: 0,
+  {
+    title: "Total Expense",
+    img: "solar:layers-minimalistic-line-duotone",
+    number: "15783",
   },
-  percentageLabel: {
-    type: String,
-    default: "vs. last week",
+  {
+    title: "Total Visitors",
+    img: "solar:users-group-two-rounded-line-duotone",
+    number: "11245",
   },
-  series: {
-    type: Array,
-    default: () => [
-      {
-        name: "Sales",
-        data: [11, 32, 45, 13],
-      },
-    ],
+  {
+    title: "Total Subscribers",
+    img: "solar:user-circle-line-duotone",
+    number: "2124",
   },
-  xaxis: {
-    type: Object,
-    default: () => ({
-      type: "category",
-      categories: [
-        "2018-09-19T00:00:00.000Z",
-        "2018-09-20T00:00:00.000Z",
-        "2018-09-22T00:00:00.000Z",
-        "2018-09-23T00:00:00.000Z",
-      ],
-      // tickAmount: 3
-    }),
-  },
-  label: {
-    type: String,
-    default: "dashboard.sales",
-  },
-  actionLabel: {
-    type: String,
-    default: "View Report",
-  },
-  options: {
-    type: Object,
-    default: () => ({}),
-  },
-});
-
-const { themes, current } = useTheme();
-const chartOptions = computed(() => {
-  const primaryColor = current.value.dark
-    ? themes.value["dark"].colors.primary
-    : themes.value["light"].colors.primary;
-
-  return {
-    chart: {
-      height: 120,
-      type: "area",
-      sparkline: {
-        enabled: true,
-      },
-      animations: {
-        speed: 400,
-      },
-    },
-    series: props.series,
-    colors: [primaryColor],
-    fill: {
-      type: "solid",
-      colors: [primaryColor],
-      opacity: 0.15,
-    },
-    stroke: {
-      curve: "smooth",
-      width: 2,
-    },
-    xaxis: props.xaxis,
-    tooltip: {
-      followCursor: true,
-      theme: "dark",
-      custom: function ({ ctx, series, seriesIndex, dataPointIndex, w }: any) {
-        const seriesName = w.config.series[seriesIndex].name;
-
-        return `<div class="rounded-lg pa-1 text-caption">
-                <div class="font-weight-bold">${formatDate(
-                  w.globals.categoryLabels[dataPointIndex]
-                )}</div>
-                <div>${series[seriesIndex][dataPointIndex]} ${seriesName}</div>
-              </div>`;
-      },
-    },
-    ...props.options,
-  };
-});
-
-const loading = ref(true);
-
-onMounted(() => {
-  setTimeout(() => {
-    loading.value = false;
-  }, 1000);
-});
+];
 </script>
 <template>
-  <v-card class="d-flex flex-grow-1 bg-primary-darken-4 pa-3" theme="dark">
-    <!-- loading spinner -->
-    <div v-if="loading" class="d-flex flex-grow-1 align-center justify-center">
-      <v-progress-circular indeterminate color="primary"></v-progress-circular>
-    </div>
-
-    <!-- information -->
-    <div v-else class="d-flex flex-column flex-grow-1">
-      <v-card-title class="d-flex">
-        <div class="font-weight-bold">{{ $t(label) }}</div>
-        <v-spacer></v-spacer>
-        <v-btn
-          variant="text"
-          color="primary"
-          class="font-weight-bold"
-          @click="$emit('action-clicked')"
-          >{{ actionLabel }}</v-btn
-        >
-      </v-card-title>
-
-      <div class="d-flex flex-column flex-grow-1">
-        <div class="pa-2">
-          <div class="text-h4">
-            {{ formatCurrency(12145.49) }}
-          </div>
-          <div class="text-primary mt-1">
-            {{ formatCurrency(4275.21) }}
-            {{ $t("dashboard.lastweek") }}
-          </div>
-        </div>
-
-        <v-spacer></v-spacer>
-
-        <div class="px-2 pb-2">
-          <div class="title mb-1 font-weight-bold">
-            {{ $t("dashboard.weeklySales") }}
-          </div>
-          <div class="d-flex align-center">
-            <div class="text-h4">
-              {{ formatCurrency(value) }}
-            </div>
-            <v-spacer></v-spacer>
-            <div class="d-flex flex-column text-right">
-              <div class="font-weight-bold">
-                <percent-trend :value="percentage" />
+  <div>
+    <v-row>
+      <v-col
+        cols="12"
+        lg="3"
+        sm="6"
+        v-for="revenuecard in earningCardsData"
+        :revenuecard="revenuecard"
+        :key="revenuecard.title"
+        class="py-0 mb-3"
+      >
+        <v-card elevation="10">
+          <span class="lstick"></span>
+          <v-card-text class="pa-5">
+            <div class="d-flex align-center">
+              <Icon
+                class="text-primary mr-5"
+                :icon="revenuecard.img"
+                width="40"
+              />
+              <div>
+                <h4 class="card-title mb-2">
+                  {{ revenuecard.title }}
+                </h4>
+                <h2 class="text-h5">
+                  {{ revenuecard.number }}
+                </h2>
               </div>
-              <div class="text-caption">{{ percentageLabel }}</div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <apexchart
-        type="area"
-        height="120"
-        :options="chartOptions"
-        :series="series"
-      ></apexchart>
-    </div>
-  </v-card>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </div>
 </template>

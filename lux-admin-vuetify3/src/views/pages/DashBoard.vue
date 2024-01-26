@@ -11,16 +11,7 @@ import TodoCard from "@/components/dashboard/TodoCard.vue";
     <v-row class="flex-0" dense>
       <v-col cols="12" xl="12">
         <!-- Sales Card -->
-        <v-card class="card-shadow" height="370">
-          <sales-card
-            :value="1837.32"
-            class="h-100"
-            :percentage="3.2"
-            style="min-height: 380px"
-            :percentage-label="$t('dashboard.lastweek')"
-            :action-label="$t('dashboard.viewReport')"
-          ></sales-card>
-        </v-card>
+        <sales-card></sales-card>
       </v-col>
     </v-row>
     <!-- ---------------------------------------------- -->
