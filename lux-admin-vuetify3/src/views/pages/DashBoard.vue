@@ -20,12 +20,12 @@ import TodoCard from "@/components/dashboard/TodoCard.vue";
     <v-row class="card-shadow flex-grow-0" dense>
       <v-col cols="6" xl="6">
         <!-- Target Card-->
-        <v-card class="card-shadow" height="440"
+        <v-card class="card-shadow" height="550"
           ><todo-card></todo-card
         ></v-card>
       </v-col>
       <v-col cols="6" xl="6">
-        <v-card class="card-shadow" height="440"
+        <v-card class="card-shadow" height="550"
           ><tickets-card></tickets-card>
         </v-card>
       </v-col>

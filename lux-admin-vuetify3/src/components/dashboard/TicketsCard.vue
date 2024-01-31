@@ -4,19 +4,17 @@ import CopyLabel from "@/components/common/CopyLabel.vue";
 const loading = ref(true);
 
 const headers = [
-  { text: "热度量", align: "start", value: "rawHot" },
   {
     text: "热点关键词",
     sortable: false,
     value: "word",
   },
   { text: "标识", value: "iconDesc" },
-  { text: "事件类型", value: "category" },
   { text: "热度日期", value: "onboardTime" },
   { text: "链接", sortable: false, align: "right", value: "action" },
 ];
 
-const open = (item) => { };
+const open = (item) => {};
 
 const items = [];
 const initweiboHotYear = (item) => {
@@ -28,7 +26,6 @@ const initweiboHotYear = (item) => {
 };
 
 onMounted(() => {
-
   initweiboHotYear();
 
   setTimeout(() => {
@@ -39,7 +36,10 @@ onMounted(() => {
 
 <template>
   <!-- loading spinner -->
-  <div v-if="loading" class="h-full d-flex flex-grow-1 align-center justify-center">
+  <div
+    v-if="loading"
+    class="h-full d-flex flex-grow-1 align-center justify-center"
+  >
     <v-progress-circular indeterminate color="primary"></v-progress-circular>
   </div>
   <div v-else>
@@ -53,24 +53,27 @@ onMounted(() => {
       </thead>
       <tbody>
         <tr v-for="item in items.values" :key="item.mid">
-          <td class="font-weight-bold">
-            {{ item.rawHot }}
-          </td>
           <td>
             <copy-label :text="item.word" />
           </td>
           <td>
-            <v-chip size="small" :color="item.iconDesc === '爆' ? 'pink' : 'primary'" class="font-weight-bold">
-              {{ item.iconDesc }}</v-chip>
+            <v-chip
+              size="small"
+              :color="item.iconDesc === '爆' ? 'pink' : 'primary'"
+              class="font-weight-bold"
+            >
+              {{ item.iconDesc }}</v-chip
+            >
           </td>
 
-          <td class="font-weight-bold">
-            {{ item.category }}
-          </td>
-          
           <td>{{ item.onboardTime }}</td>
           <td>
-            <v-btn elevation="4" variant="elevated" size="small" @click="open(item)">
+            <v-btn
+              elevation="4"
+              variant="elevated"
+              size="small"
+              @click="open(item)"
+            >
               Open Text
             </v-btn>
           </td>

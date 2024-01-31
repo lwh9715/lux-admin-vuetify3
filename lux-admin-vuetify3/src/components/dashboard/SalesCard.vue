@@ -5,7 +5,7 @@ const earningCardsData = [
   {
     title: "Total Income",
     img: "solar:bill-line-duotone",
-    number: "3233",
+    number: "1314",
   },
   {
     title: "Total Expense",
@@ -15,7 +15,7 @@ const earningCardsData = [
   {
     title: "Total Visitors",
     img: "solar:users-group-two-rounded-line-duotone",
-    number: "11245",
+    number: "205",
   },
   {
     title: "Total Subscribers",
