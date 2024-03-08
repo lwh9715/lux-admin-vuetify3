@@ -27,24 +27,12 @@ const earningCardsData = [
 <template>
   <div>
     <v-row>
-      <v-col
-        cols="12"
-        lg="3"
-        sm="6"
-        v-for="revenuecard in earningCardsData"
-        :revenuecard="revenuecard"
-        :key="revenuecard.title"
-        class="py-0 mb-3"
-      >
+      <v-col cols="12" lg="3" sm="6" v-for="revenuecard in earningCardsData" :revenuecard="revenuecard" :key="revenuecard.title" class="py-0 mb-3">
         <v-card elevation="10">
           <span class="lstick"></span>
           <v-card-text class="pa-5">
             <div class="d-flex align-center">
-              <Icon
-                class="text-primary mr-5"
-                :icon="revenuecard.img"
-                width="40"
-              />
+              <Icon class="text-primary mr-5" :icon="revenuecard.img" width="40" />
               <div>
                 <h4 class="card-title mb-2">
                   {{ revenuecard.title }}

@@ -59,8 +59,7 @@ const articles = [
                 {{ item.title }}
               </v-card-title>
               <v-card-subtitle>
-                Last Read At{{ item.lastReadAt }}</v-card-subtitle
-              >
+                Last Read At{{ item.lastReadAt }}</v-card-subtitle>
               <v-card-text>
                 {{ item.content }}
               </v-card-text>

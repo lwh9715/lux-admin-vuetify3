@@ -129,8 +129,7 @@ watch(
           <div class="pa-6 user-message">
             <div class="message align-center">
               <v-avatar class="mr-9">
-                <img src="https://lh3.googleusercontent.com/a/AGNmyxZcE23yf7BAdb2S3fAGHBfQaUOkfjYtgsKHrDXLbx0=s96-c"
-                  alt="alt" />
+                <img src="https://lh3.googleusercontent.com/a/AGNmyxZcE23yf7BAdb2S3fAGHBfQaUOkfjYtgsKHrDXLbx0=s96-c" alt="alt" />
               </v-avatar>
               <b> {{ message.content }}</b>
             </div>
@@ -140,9 +139,7 @@ watch(
           <div class="bg-white pa-6">
             <div class="message">
               <v-avatar class="mr-4">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"
-                  alt="alt" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s" alt="alt" />
               </v-avatar>
               <md-editor v-model="message.content" previewOnly />
             </div>
@@ -169,8 +166,7 @@ watch(
           variant="solo"
         ></v-select>
       </div> -->
-      <v-text-field color="primary" ref="input" v-model="userMessage" placeholder="SendMessage" hide-details
-        @keyup.enter="sendMessage">
+      <v-text-field color="primary" ref="input" v-model="userMessage" placeholder="SendMessage" hide-details @keyup.enter="sendMessage">
         <template #prepend-inner>
           <v-icon>mdi-microphone</v-icon>
         </template>

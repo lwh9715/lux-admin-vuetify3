@@ -22,13 +22,10 @@ const customizeTheme = useCustomizeThemeStore();
   <!-- ---------------------------------------------- -->
   <!---MainArea -->
   <!-- ---------------------------------------------- -->
-  <v-main
-    v-touch="{
+  <v-main v-touch="{
       left: () => (customizeTheme.mainSidebar = false),
       right: () => (customizeTheme.mainSidebar = true),
-    }"
-    class="main-container"
-  >
+    }" class="main-container">
     <!-- <GlobalLoading /> -->
 
     <div class="d-none d-sm-block px-3">

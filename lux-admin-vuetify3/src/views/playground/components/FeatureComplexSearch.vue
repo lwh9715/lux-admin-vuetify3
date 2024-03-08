@@ -88,30 +88,14 @@ const search = ref<string>("");
   <v-card rounded variant="flat" class="text-blue-grey-darken-3">
     <!-- 领域 -->
     <v-chip-group v-model="currentFieldLabel" mandatory>
-      <v-chip
-        filter
-        label
-        variant="text"
-        color="primary"
-        v-for="label in fieldLabelList"
-        :key="label"
-        :value="label"
-      >
+      <v-chip filter label variant="text" color="primary" v-for="label in fieldLabelList" :key="label" :value="label">
         {{ label }}
       </v-chip>
     </v-chip-group>
 
     <!-- 分类 -->
     <v-chip-group v-model="currentCategoryLabel" mandatory>
-      <v-chip
-        filter
-        label
-        variant="text"
-        color="primary"
-        v-for="label in categoryLabelList"
-        :key="label"
-        :value="label"
-      >
+      <v-chip filter label variant="text" color="primary" v-for="label in categoryLabelList" :key="label" :value="label">
         {{ label }}
       </v-chip>
     </v-chip-group>
@@ -119,21 +103,11 @@ const search = ref<string>("");
     <v-divider class="my-3"></v-divider>
     <div class="d-flex align-center">
       <!-- 排序 -->
-      <v-btn
-        variant="text"
-        color="primary"
-        :active="sortBtnActive"
-        class="mr-2"
-      >
+      <v-btn variant="text" color="primary" :active="sortBtnActive" class="mr-2">
         {{ currentSort }}
         <v-menu activator="parent">
           <v-list>
-            <v-list-item
-              v-for="(item, index) in sortList"
-              :key="index"
-              :value="item"
-              @click="currentSort = item"
-            >
+            <v-list-item v-for="(item, index) in sortList" :key="index" :value="item" @click="currentSort = item">
               <v-list-item-title>{{ item }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -148,21 +122,11 @@ const search = ref<string>("");
       </v-btn>
 
       <!-- 类型 -->
-      <v-btn
-        variant="text"
-        color="primary"
-        :active="typeBtnActive"
-        class="mr-2"
-      >
+      <v-btn variant="text" color="primary" :active="typeBtnActive" class="mr-2">
         {{ currentType }}
         <v-menu activator="parent">
           <v-list>
-            <v-list-item
-              v-for="(item, index) in typeList"
-              :key="index"
-              :value="item"
-              @click="currentType = item"
-            >
+            <v-list-item v-for="(item, index) in typeList" :key="index" :value="item" @click="currentType = item">
               <v-list-item-title>{{ item }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -177,21 +141,11 @@ const search = ref<string>("");
       </v-btn>
 
       <!-- 版权 -->
-      <v-btn
-        variant="text"
-        color="primary"
-        :active="licenseBtnActive"
-        class="mr-2"
-      >
+      <v-btn variant="text" color="primary" :active="licenseBtnActive" class="mr-2">
         {{ currentLicense }}
         <v-menu activator="parent">
           <v-list>
-            <v-list-item
-              v-for="(item, index) in licenseList"
-              :key="index"
-              :value="item"
-              @click="currentLicense = item"
-            >
+            <v-list-item v-for="(item, index) in licenseList" :key="index" :value="item" @click="currentLicense = item">
               <v-list-item-title>{{ item }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -207,41 +161,17 @@ const search = ref<string>("");
 
       <!-- eaglepack  -->
       <div class="mr-5">
-        <v-switch
-          density="compact"
-          v-model="eaglepackKey"
-          hide-details
-          label="仅显示 EaglePack"
-          color="primary"
-          inset
-        ></v-switch>
+        <v-switch density="compact" v-model="eaglepackKey" hide-details label="仅显示 EaglePack" color="primary" inset></v-switch>
       </div>
 
       <!-- 我的最爱 -->
       <div>
-        <v-switch
-          density="compact"
-          v-model="myFavorateKey"
-          hide-details
-          label="仅显示我的最爱"
-          color="primary"
-          inset
-        ></v-switch>
+        <v-switch density="compact" v-model="myFavorateKey" hide-details label="仅显示我的最爱" color="primary" inset></v-switch>
       </div>
       <!-- 搜索 -->
       <v-spacer></v-spacer>
       <div class="" style="width: 300px">
-        <v-text-field
-          v-model="search"
-          color="primary"
-          variant="outlined"
-          hide-details
-          density="compact"
-          filled
-          rounded
-          placeholder="搜索"
-          class="mr-5"
-        >
+        <v-text-field v-model="search" color="primary" variant="outlined" hide-details density="compact" filled rounded placeholder="搜索" class="mr-5">
           <template v-slot:prepend-inner>
             <v-icon>mdi-magnify</v-icon>
           </template>
@@ -254,20 +184,11 @@ const search = ref<string>("");
     <perfect-scrollbar style="height: 800px">
       <v-container>
         <v-row align="center">
-          <v-col
-            v-for="item in filteredList"
-            :key="item.id"
-            cols="6"
-            md="4"
-            lg="3"
-          >
+          <v-col v-for="item in filteredList" :key="item.id" cols="6" md="4" lg="3">
             <v-card class="text-blue-grey-darken-3">
               <v-img :lazy-src="item.thumbnail" :src="item.thumbnail"></v-img>
 
-              <v-card-text
-                style="height: 120px"
-                class="d-flex flex-column justify-space-between"
-              >
+              <v-card-text style="height: 120px" class="d-flex flex-column justify-space-between">
                 <p class="text-h6" style="word-wrap: break-word">
                   {{ item.title }}
                 </p>
@@ -275,14 +196,10 @@ const search = ref<string>("");
                 <div class="d-flex align-center justify-space-between">
                   <span class="text-blue-grey"> {{ item.author }}</span>
                   <span>
-                    <span class="mr-2"
-                      ><v-icon>mdi-download</v-icon>
-                      {{ item.downloadsAndViews?.split("\n")[0] }}</span
-                    >
-                    <span
-                      ><v-icon>mdi-eye</v-icon>
-                      {{ item.downloadsAndViews?.split("\n")[1] }}</span
-                    >
+                    <span class="mr-2"><v-icon>mdi-download</v-icon>
+                      {{ item.downloadsAndViews?.split("\n")[0] }}</span>
+                    <span><v-icon>mdi-eye</v-icon>
+                      {{ item.downloadsAndViews?.split("\n")[1] }}</span>
                   </span>
                 </div>
               </v-card-text>

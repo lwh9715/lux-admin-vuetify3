@@ -29,13 +29,7 @@ const setLocale = (locale: string) => {
       </v-btn>
     </template>
     <v-list nav>
-      <v-list-item
-        v-for="locale in availableLocales"
-        :key="locale.code"
-        @click="setLocale(locale.code)"
-        density="compact"
-        :active="locale.code === current"
-      >
+      <v-list-item v-for="locale in availableLocales" :key="locale.code" @click="setLocale(locale.code)" density="compact" :active="locale.code === current">
         <template v-slot:prepend>
           <Icon :icon="`twemoji:flag-${locale.name}`" class="mr-2" />
         </template>

@@ -55,27 +55,15 @@ const setStatus = (status: string) => {
 <template>
   <v-menu scroll-y :close-on-content-click="false">
     <template v-slot:activator="{ props }">
-      <v-btn
-        width="60"
-        variant="text"
-        size="small"
-        v-bind="props"
-        :color="currentStatus.color"
-      >
+      <v-btn width="60" variant="text" size="small" v-bind="props" :color="currentStatus.color">
         {{ currentStatus.label }}
       </v-btn>
     </template>
     <v-list elevation="1">
-      <v-list-item
-        v-for="status in userStatusList"
-        :key="status.code"
-        @click="setStatus(status.code)"
-        density="compact"
-      >
+      <v-list-item v-for="status in userStatusList" :key="status.code" @click="setStatus(status.code)" density="compact">
         <v-list-item-title class="text-body-2">
           <v-icon size="small" :color="status.color">mdi-circle-medium</v-icon>
-          {{ status.label }}</v-list-item-title
-        >
+          {{ status.label }}</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-menu>

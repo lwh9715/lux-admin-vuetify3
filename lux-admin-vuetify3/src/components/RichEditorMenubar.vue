@@ -138,27 +138,10 @@ const items = ref([
 <template>
   <perfect-scrollbar class="d-flex align-center menuBar">
     <template v-for="(item, index) in items">
-      <v-divider
-        thickness="3"
-        class="mx-1"
-        inset
-        vertical
-        v-if="item.type === 'divider'"
-      ></v-divider>
-      <v-btn
-        :active="item?.isActive ? item.isActive() : null"
-        icon
-        rounded="0"
-        variant="text"
-        @click="item.action"
-        v-else
-      >
+      <v-divider thickness="3" class="mx-1" inset vertical v-if="item.type === 'divider'"></v-divider>
+      <v-btn :active="item?.isActive ? item.isActive() : null" icon rounded="0" variant="text" @click="item.action" v-else>
         <v-icon>{{ item.icon }}</v-icon>
-        <v-tooltip
-          activator="parent"
-          location="top"
-          :text="item.title"
-        ></v-tooltip>
+        <v-tooltip activator="parent" location="top" :text="item.title"></v-tooltip>
       </v-btn>
     </template>
   </perfect-scrollbar>

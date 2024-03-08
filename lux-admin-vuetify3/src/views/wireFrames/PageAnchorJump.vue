@@ -2,31 +2,14 @@
   <v-container>
     <v-row>
       <v-col class="d-none d-sm-block left-menu" sm="2">
-        <v-sheet
-          :width="width"
-          color="rgba(0,0,0,.1)"
-          rounded="lg"
-          class="fixed pa-2"
-          elevation="2"
-        >
+        <v-sheet :width="width" color="rgba(0,0,0,.1)" rounded="lg" class="fixed pa-2" elevation="2">
           <!--  -->
           <v-list height="1000">
             <v-list-subheader>锚点菜单</v-list-subheader>
 
-            <v-list-item
-              v-for="item in anchorList"
-              :key="item.id"
-              :value="item"
-              :active="item.id === currentId"
-              active-color="primary"
-              rounded="xl"
-              @click="jumpToAnchor(item.id)"
-            >
+            <v-list-item v-for="item in anchorList" :key="item.id" :value="item" :active="item.id === currentId" active-color="primary" rounded="xl" @click="jumpToAnchor(item.id)">
               <template v-slot:prepend>
-                <v-icon
-                  class="d-none d-lg-inline-block"
-                  :icon="item.icon"
-                ></v-icon>
+                <v-icon class="d-none d-lg-inline-block" :icon="item.icon"></v-icon>
               </template>
 
               <v-list-item-title v-text="item.text"></v-list-item-title>
@@ -47,12 +30,7 @@
     </v-row>
     <div class="to-top">
       <v-card width="100" height="200" color="rgba(0,0,0,.3)">
-        <v-btn
-          @click="backToTop()"
-          class="ma-2"
-          color="indigo"
-          icon="mdi-arrow-up-bold"
-        ></v-btn>
+        <v-btn @click="backToTop()" class="ma-2" color="indigo" icon="mdi-arrow-up-bold"></v-btn>
       </v-card>
     </div>
   </v-container>

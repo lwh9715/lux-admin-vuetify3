@@ -20,16 +20,7 @@ const showPreview = ref(false);
 
 <template>
   <div class="image-preview">
-    <v-img
-      class="thumbnail"
-      :src="props.thumbnail"
-      height="100"
-      width="160"
-      cover
-      attrs="props"
-      @mounseh="showPreview = true"
-      @mouseleave="showPreview = false"
-    />
+    <v-img class="thumbnail" :src="props.thumbnail" height="100" width="160" cover attrs="props" @mounseh="showPreview = true" @mouseleave="showPreview = false" />
     <v-card class="preview-card" v-if="showPreview">
       <v-img class="preview-image" :src="previewImage" />
     </v-card>

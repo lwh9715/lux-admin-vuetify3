@@ -40,64 +40,19 @@ const handleEdit = (id) => {
       <v-col cols="6" md="4">
         <v-card min-height="800" class="pa-5">
           <v-list nav>
-            <v-btn
-              color="primary"
-              class="my-5"
-              @click="chatHistory.addMenu(Date.now())"
-              >addNewChat</v-btn
-            >
-            <v-btn
-              color="primary"
-              class="my-5 ml-1"
-              @click="chatHistory.clearAllChat"
-              >clearAllChat</v-btn
-            >
-            <v-list-item
-              v-for="menu in chatHistory.chatMenus"
-              :key="menu.id"
-              prepend-icon="mdi-forum"
-              :value="menu.id"
-              @click="navigateTo(menu.id)"
-              :active="chatHistory.activeChatMenuId === menu.id"
-            >
-              <v-text-field
-                v-if="menu.isEdit"
-                density="compact"
-                hide-details
-                v-model="menu.title"
-              ></v-text-field>
+            <v-btn color="primary" class="my-5" @click="chatHistory.addMenu(Date.now())">addNewChat</v-btn>
+            <v-btn color="primary" class="my-5 ml-1" @click="chatHistory.clearAllChat">clearAllChat</v-btn>
+            <v-list-item v-for="menu in chatHistory.chatMenus" :key="menu.id" prepend-icon="mdi-forum" :value="menu.id" @click="navigateTo(menu.id)" :active="chatHistory.activeChatMenuId === menu.id">
+              <v-text-field v-if="menu.isEdit" density="compact" hide-details v-model="menu.title"></v-text-field>
 
               <div v-else>{{ menu.title }}</div>
-              <template
-                v-if="chatHistory.activeChatMenuId === menu.id"
-                v-slot:append
-              >
-                <v-btn
-                  density="compact"
-                  color="grey-lighten-1"
-                  icon="mdi-note-edit-outline"
-                  variant="text"
-                  @click="handleEdit(menu.id)"
-                ></v-btn>
-                <v-btn
-                  density="compact"
-                  color="grey-lighten-1"
-                  icon="mdi-delete-outline"
-                  variant="text"
-                  @click="handleDelete(menu.id)"
-                ></v-btn>
+              <template v-if="chatHistory.activeChatMenuId === menu.id" v-slot:append>
+                <v-btn density="compact" color="grey-lighten-1" icon="mdi-note-edit-outline" variant="text" @click="handleEdit(menu.id)"></v-btn>
+                <v-btn density="compact" color="grey-lighten-1" icon="mdi-delete-outline" variant="text" @click="handleDelete(menu.id)"></v-btn>
               </template>
             </v-list-item>
-            <v-list-item
-              prepend-icon="mdi-view-dashboard"
-              title="Home"
-              value="home"
-            ></v-list-item>
-            <v-list-item
-              prepend-icon="mdi-forum"
-              title="About"
-              value="about"
-            ></v-list-item>
+            <v-list-item prepend-icon="mdi-view-dashboard" title="Home" value="home"></v-list-item>
+            <v-list-item prepend-icon="mdi-forum" title="About" value="about"></v-list-item>
           </v-list>
         </v-card>
       </v-col>

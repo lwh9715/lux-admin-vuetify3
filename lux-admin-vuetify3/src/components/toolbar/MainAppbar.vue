@@ -25,8 +25,7 @@ const showMobileSearch = ref(false);
     <!-- search input mobil -->
     <!-- ---------------------------------------------- -->
     <div class="d-flex flex-fill align-center" v-if="showMobileSearch">
-      <v-text-field color="primary" variant="solo" prepend-inner-icon="mdi-magnify" append-inner-icon="mdi-close"
-        @click:append-inner="showMobileSearch = false" hide-details placeholder="Search"></v-text-field>
+      <v-text-field color="primary" variant="solo" prepend-inner-icon="mdi-magnify" append-inner-icon="mdi-close" @click:append-inner="showMobileSearch = false" hide-details placeholder="Search"></v-text-field>
     </div>
     <div v-else class="px-2 d-flex align-center justify-space-between w-100">
       <!-- ---------------------------------------------- -->
@@ -34,8 +33,7 @@ const showMobileSearch = ref(false);
       <!-- ---------------------------------------------- -->
       <v-app-bar-nav-icon @click="customizeTheme.mainSidebar = !customizeTheme.mainSidebar"></v-app-bar-nav-icon>
       <div>
-        <v-text-field v-if="mdAndUp" class="ml-2" style="width: 400px" color="primary" variant="solo" density="compact"
-          prepend-inner-icon="mdi-magnify" hide-details placeholder="Search"></v-text-field>
+        <v-text-field v-if="mdAndUp" class="ml-2" style="width: 400px" color="primary" variant="solo" density="compact" prepend-inner-icon="mdi-magnify" hide-details placeholder="Search"></v-text-field>
       </div>
 
       <v-spacer></v-spacer>

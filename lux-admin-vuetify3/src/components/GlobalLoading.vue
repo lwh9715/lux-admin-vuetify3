@@ -10,12 +10,7 @@ const appStore = useAppStore();
 </script>
 
 <template>
-  <v-card
-    v-if="appStore.globalLoading"
-    color="white"
-    class="global-loading d-flex align-center justify-center"
-    height="100vh"
-  >
+  <v-card v-if="appStore.globalLoading" color="white" class="global-loading d-flex align-center justify-center" height="100vh">
     <Loading />
   </v-card>
 </template>

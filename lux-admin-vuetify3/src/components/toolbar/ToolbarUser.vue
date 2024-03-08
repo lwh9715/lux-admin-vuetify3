@@ -35,8 +35,7 @@ const navs = [
       <v-btn class="mx-2" icon v-bind="props">
         <v-badge content="2" color="success" dot bordered>
           <v-avatar size="40">
-            <v-img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"></v-img>
+            <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"></v-img>
           </v-avatar>
         </v-badge>
       </v-btn>
@@ -49,8 +48,7 @@ const navs = [
         <v-list-item to="/profile">
           <template v-slot:prepend>
             <v-avatar size="40">
-              <v-img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"></v-img>
+              <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"></v-img>
             </v-avatar>
           </template>
 

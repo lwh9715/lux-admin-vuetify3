@@ -46,16 +46,8 @@ const addDynamicHeader = () => {
 
 <template>
   <div class="">
-    <v-btn class="mb-5" color="primary" @click="addDynamicHeader"
-      >增加动态header</v-btn
-    >
-    <v-data-table-server
-      :itemsLength="headers.length"
-      :headers="headers"
-      :items="serverItems"
-      :loading="loading"
-      class="elevation-1"
-    >
+    <v-btn class="mb-5" color="primary" @click="addDynamicHeader">增加动态header</v-btn>
+    <v-data-table-server :itemsLength="headers.length" :headers="headers" :items="serverItems" :loading="loading" class="elevation-1">
     </v-data-table-server>
   </div>
 </template>

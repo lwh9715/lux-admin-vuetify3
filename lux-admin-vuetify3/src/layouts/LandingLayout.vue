@@ -20,13 +20,10 @@ const customizeTheme = useCustomizeThemeStore();
   <!---MainArea -->
   <!-- ---------------------------------------------- -->
 
-  <v-main
-    class="main-container"
-    v-touch="{
+  <v-main class="main-container" v-touch="{
       left: () => (customizeTheme.mainSidebar = false),
       right: () => (customizeTheme.mainSidebar = true),
-    }"
-  >
+    }">
     <!-- <GlobalLoading /> -->
     <ToolBox />
     <div class="flex-fill">
