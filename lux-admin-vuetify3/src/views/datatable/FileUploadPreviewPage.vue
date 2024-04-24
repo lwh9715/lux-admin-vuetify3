@@ -134,12 +134,11 @@ const filterdFileInfos = computed(() => {
     <!-- ---------------------------------------------- -->
     <!-- No File View -->
     <!-- ---------------------------------------------- -->
-    <v-sheet class="d-flex align-center justify-center" height="800" v-if="fileInfos.length === 0">
+    <v-sheet class="d-flex align-center justify-center" height="580" v-if="fileInfos.length === 0">
       <div class="text-center">
         <h3 class="text-h5 text-md-h3 font-weight-bold text-primary">
           Upload Some Images
         </h3>
-        <AnimationUpload :size="300" />
       </div>
     </v-sheet>
     <v-sheet v-else>

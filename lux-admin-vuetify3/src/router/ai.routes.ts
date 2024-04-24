@@ -1,13 +1,13 @@
 // users Data Page
 export default [
   {
-    path: "/ai/chatbot_v1",
-    component: () => import("@/views/chatgpt/ChatBotV1.vue"),
+    path: "/ai/chatbot",
+    component: () => import("@/views/chatgpt/ChatBot.vue"),
     meta: {
       requiresAuth: true,
       layout: "landing",
       category: "AI",
-      title: "ChatBotV1",
+      title: "ChatBot",
     },
   },
 ];

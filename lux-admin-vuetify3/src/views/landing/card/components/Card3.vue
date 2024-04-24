@@ -7,7 +7,7 @@
 
 <template>
   <v-sheet color="#333" elevation="0" class="mx-auto landing-warpper text-left" rounded>
-    <v-sheet elevation="0" color="transparent" max-width="1600 " class="mx-auto my-10">
+    <v-sheet elevation="0" color="transparent" max-width="1600" class="mx-auto my-10">
       <v-container>
         <v-row align="center">
           <v-col cols="12" md="4">

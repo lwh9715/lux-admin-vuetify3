@@ -6,8 +6,6 @@ import MainAppbar from "@/components/toolbar/MainAppbar.vue";
 import ToolBox from "@/components/Toolbox.vue";
 import { useCustomizeThemeStore } from "@/stores/customizeTheme";
 const customizeTheme = useCustomizeThemeStore();
-
-// import GlobalLoading from "@/components/GlobalLoading.vue";
 </script>
 
 <template>

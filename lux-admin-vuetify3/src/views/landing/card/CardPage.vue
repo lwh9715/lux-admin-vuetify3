@@ -4,7 +4,6 @@
 * @Description: 
 -->
 <script setup lang="ts">
-import Card1 from "./components/Card1.vue";
 import Card3 from "./components/Card3.vue";
 </script>
 
@@ -14,7 +13,6 @@ import Card3 from "./components/Card3.vue";
   <!-- ---------------------------------------------- -->
   <div>
     <Card3 />
-    <Card1 />
   </div>
 </template>
 

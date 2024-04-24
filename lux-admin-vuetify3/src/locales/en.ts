@@ -125,7 +125,7 @@ export default {
       richTextEditor: "Rich Text Editor",
       editTable: "Edit Table",
     },
-    chatbot_v1: "ChatBot",
+    chatbot: "ChatBot",
     voicebot: "VoiceBot",
     imagebot: "ImageBot",
     chartbot: "ChartBot",

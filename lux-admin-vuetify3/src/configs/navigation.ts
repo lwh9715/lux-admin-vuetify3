@@ -1,6 +1,5 @@
 import menuApps from "./menus/apps.menu";
 import menuPages from "./menus/pages.menu";
-import menuCharts from "./menus/charts.menu";
 import menuLanding from "./menus/landing.menu";
 import menuData from "./menus/data.menu";
 import menuAi from "./menus/ai.menu";
@@ -30,11 +29,6 @@ export default {
     {
       text: "Landing",
       items: menuLanding
-    },
-    {
-      text: "Charts",
-      key: "menu.charts",
-      items: menuCharts,
     },
     {
       text: "chatgpt",

@@ -123,7 +123,7 @@ export default {
       richTextEditor: "富文本编辑器",
       editTable: "可编辑数据表",
     },
-    chatbot_v1: "聊天助手",
+    chatbot: "聊天助手",
     voicebot: "语音对话助手",
     imagebot: "图像助手",
     chartbot: "图表助手",
