@@ -210,10 +210,6 @@ const formTitle = computed(() => {
                   <template v-slot:activator="{ props }">
                     <v-btn color="blue" icon variant="text" @click="editItem(item)" v-bind="props">
                       <v-icon>mdi-pencil-outline</v-icon>
-                      <!-- <img
-                        width="26"
-                        src="https://img.icons8.com/fluency/48/null/edit.png"
-                    /> -->
                     </v-btn>
                   </template>
                 </v-tooltip>
@@ -221,10 +217,6 @@ const formTitle = computed(() => {
                   <template v-slot:activator="{ props }">
                     <v-btn icon variant="text" @click="deleteItem(item)" v-bind="props" color="error">
                       <v-icon>mdi-delete-outline</v-icon>
-                      <!-- <img
-                        width="26"
-                        src="https://img.icons8.com/fluency/48/null/filled-trash.png"
-                    /> -->
                     </v-btn>
                   </template>
                 </v-tooltip>
