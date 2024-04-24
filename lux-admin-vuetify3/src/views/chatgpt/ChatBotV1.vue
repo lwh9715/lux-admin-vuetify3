@@ -5,8 +5,6 @@
 -->
 <script setup lang="ts">
 import { useSnackbarStore } from "@/stores/snackbarStore";
-import AnimationChat from "@/components/animations/AnimationChat1.vue";
-import AnimationAi from "@/components/animations/AnimationBot1.vue";
 import { read, countAndCompleteCodeBlocks } from "@/utils/aiUtils";
 import { scrollToBottom } from "@/utils/common";
 import MdEditor from "md-editor-v3";

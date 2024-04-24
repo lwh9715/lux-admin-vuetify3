@@ -6,7 +6,6 @@
 <script setup lang="ts">
 import moment from "moment";
 import { formatFileSize } from "@/utils/common";
-import AnimationUpload from "@/components/animations/AnimationUpload.vue";
 
 // Refs
 const files = ref<any[]>([]);

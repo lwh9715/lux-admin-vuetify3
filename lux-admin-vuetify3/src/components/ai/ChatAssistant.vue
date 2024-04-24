@@ -6,7 +6,6 @@
 <script setup lang="ts">
 import { useDisplay } from "vuetify";
 import { useSnackbarStore } from "@/stores/snackbarStore";
-import AnimationAi from "@/components/animations/AnimationBot1.vue";
 import { read, countAndCompleteCodeBlocks } from "@/utils/aiUtils";
 import { scrollToBottom } from "@/utils/common";
 import MdEditor from "md-editor-v3";
