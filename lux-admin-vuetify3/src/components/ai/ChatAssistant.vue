@@ -262,7 +262,7 @@ const { xs } = useDisplay();
             variant="elevated"
             size="42"
             icon
-            @click="chatGPTStore.configDialog = true"
+            @click=""
           >
             <v-icon size="30" class="text-primary">mdi-cog-outline</v-icon>
             <v-tooltip

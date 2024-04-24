@@ -20,7 +20,6 @@ export const useSpeechStore = defineStore({
     isPlaying: false,
     voiceEmotion: "",
     voiceRate: 1,
-    voiceConfigDialog: false,
     localName: "晓晓",
     styleList: [],
   }),
