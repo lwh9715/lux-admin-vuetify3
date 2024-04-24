@@ -10,14 +10,4 @@ export default [
       title: "ChatBotV1",
     },
   },
-  {
-    path: "/ai/chatbot_v2",
-    component: () => import("@/views/chatgpt/ChatBotV2.vue"),
-    meta: {
-      requiresAuth: true,
-      layout: "landing",
-      category: "AI",
-      title: "ChatBotV2",
-    },
-  }
 ];

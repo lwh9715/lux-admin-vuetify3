@@ -6,7 +6,6 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 import ChatAssistant from "@/components/ai/ChatAssistant.vue";
-import TranslationAssistant from "@/components/ai/TranslationAssistant.vue";
 import { useChatGPTStore } from "@/stores/chatGPTStore";
 import ApiKeyDialog from "@/components/ApiKeyDialog.vue";
 const chatGPTStore = useChatGPTStore();
@@ -29,38 +28,10 @@ const toolboxShow = ref(false);
       </v-btn>
       <v-divider />
       <!-- ---------------------------------------------- -->
-      <!-- ApiKey -->
-      <!-- ---------------------------------------------- -->
-      <v-btn @click="chatGPTStore.configDialog = true" variant="text" size="50" color="blue">
-        <v-icon size="30">mdi-key-outline</v-icon>
-        <v-tooltip activator="parent" location="left" :text="$t('toolbox.chatgptConfig.title')"></v-tooltip>
-      </v-btn>
-      <ApiKeyDialog />
-      <v-divider />
-      <!-- ---------------------------------------------- -->
       <!-- Chat Assistant -->
       <!-- ---------------------------------------------- -->
       <ChatAssistant />
       <v-divider />
-      <!-- ---------------------------------------------- -->
-      <!-- Translation Assistant -->
-      <!-- ---------------------------------------------- -->
-      <TranslationAssistant />
-      <v-divider />
-      <!-- ---------------------------------------------- -->
-      <!-- Code Assistant -->
-      <!-- ---------------------------------------------- -->
-      <v-btn size="50">
-        <v-icon size="30">mdi-code-tags</v-icon>
-        <v-tooltip activator="parent" location="left" :text="$t('toolbox.codeAssistant.title')"></v-tooltip>
-      </v-btn>
-      <!-- ---------------------------------------------- -->
-      <!-- Code Assistant -->
-      <!-- ---------------------------------------------- -->
-      <v-btn size="50" to="/playground">
-        <v-icon size="30">mdi-seesaw</v-icon>
-        <v-tooltip activator="parent" location="left" :text="$t('toolbox.playGround.title')"></v-tooltip>
-      </v-btn>
     </v-card>
   </transition>
 </template>

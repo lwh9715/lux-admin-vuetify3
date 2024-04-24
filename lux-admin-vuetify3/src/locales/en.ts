@@ -126,7 +126,6 @@ export default {
       editTable: "Edit Table",
     },
     chatbot_v1: "ChatBot",
-    chatbot_v2: "Q&A Bot",
     voicebot: "VoiceBot",
     imagebot: "ImageBot",
     chartbot: "ChartBot",
@@ -150,9 +149,6 @@ export default {
     apikey: {
       title: "API Key",
     },
-    chatgptConfig: {
-      title: "ChatGPT Config",
-    },
     chatAssistant: {
       title: "Chat Assistant",
     },
@@ -165,12 +161,6 @@ export default {
       read: "Read",
       sourceLanguagePlaceholder: "Select the target translation language",
       targetLanguagePlaceholder: "You can paste the text directly for reading",
-    },
-    codeAssistant: {
-      title: "Code Assistant",
-    },
-    playGround: {
-      title: "Playground",
     },
   },
   chatgpt: {

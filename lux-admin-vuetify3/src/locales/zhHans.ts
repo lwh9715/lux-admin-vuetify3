@@ -124,7 +124,6 @@ export default {
       editTable: "可编辑数据表",
     },
     chatbot_v1: "聊天助手",
-    chatbot_v2: "问答助手",
     voicebot: "语音对话助手",
     imagebot: "图像助手",
     chartbot: "图表助手",
@@ -146,9 +145,6 @@ export default {
     apikey: {
       title: "API Key",
     },
-    chatgptConfig: {
-      title: "ChatGPT 配置",
-    },
     chatAssistant: {
       title: "聊天助手",
     },
@@ -161,12 +157,6 @@ export default {
       read: "朗读",
       sourceLanguagePlaceholder: "请选择目标翻译语言",
       targetLanguagePlaceholder: "可以直接粘贴文本进行阅读",
-    },
-    codeAssistant: {
-      title: "代码助手",
-    },
-    playGround: {
-      title: "PlayGround",
     },
   },
   chatgpt: {
