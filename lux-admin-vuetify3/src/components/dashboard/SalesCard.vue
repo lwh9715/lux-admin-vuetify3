@@ -10,17 +10,17 @@ const earningCardsData = [
   {
     title: "Total Expense",
     img: "solar:layers-minimalistic-line-duotone",
-    number: "15783",
+    number: "23",
   },
   {
     title: "Total Visitors",
     img: "solar:users-group-two-rounded-line-duotone",
-    number: "205",
+    number: "22",
   },
   {
     title: "Total Subscribers",
     img: "solar:user-circle-line-duotone",
-    number: "2124",
+    number: "3",
   },
 ];
 </script>

@@ -36,10 +36,7 @@ onMounted(() => {
 
 <template>
   <!-- loading spinner -->
-  <div
-    v-if="loading"
-    class="h-full d-flex flex-grow-1 align-center justify-center"
-  >
+  <div v-if="loading" class="h-full d-flex flex-grow-1 align-center justify-center">
     <v-progress-circular indeterminate color="primary"></v-progress-circular>
   </div>
   <div v-else>
@@ -57,23 +54,13 @@ onMounted(() => {
             <copy-label :text="item.word" />
           </td>
           <td>
-            <v-chip
-              size="small"
-              :color="item.iconDesc === '爆' ? 'pink' : 'primary'"
-              class="font-weight-bold"
-            >
-              {{ item.iconDesc }}</v-chip
-            >
+            <v-chip size="small" :color="item.iconDesc === '爆' ? 'pink' : 'primary'" class="font-weight-bold">
+              {{ item.iconDesc }}</v-chip>
           </td>
 
           <td>{{ item.onboardTime }}</td>
           <td>
-            <v-btn
-              elevation="4"
-              variant="elevated"
-              size="small"
-              @click="open(item)"
-            >
+            <v-btn elevation="4" variant="elevated" size="small" @click="open(item)">
               Open Text
             </v-btn>
           </td>
