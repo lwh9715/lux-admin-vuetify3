@@ -53,7 +53,7 @@ const navs = [
           </template>
 
           <v-list-item-title class="font-weight-bold text-primary">
-            YANG J.K.
+            AMOS J.K.
             <StatusMenu />
           </v-list-item-title>
           <v-list-item-subtitle>
@@ -86,19 +86,6 @@ const navs = [
       <!-- Logout Area -->
       <!-- ---------------------------------------------- -->
       <v-list variant="flat" elevation="0" :lines="false" density="compact">
-        <v-list-item color="primary" to="nav.link" link density="compact">
-          <template v-slot:prepend>
-            <v-avatar size="30">
-              <v-icon>mdi-lifebuoy</v-icon>
-            </v-avatar>
-          </template>
-
-          <div>
-            <v-list-item-subtitle class="text-body-2">
-              Help Center
-            </v-list-item-subtitle>
-          </div>
-        </v-list-item>
         <v-list-item color="primary" link @click="handleLogout" density="compact">
           <template v-slot:prepend>
             <v-avatar size="30">

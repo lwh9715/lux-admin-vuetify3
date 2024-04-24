@@ -5,7 +5,7 @@
 -->
 <script setup lang="ts">
 import { useAppStore } from "@/stores/appStore";
-import Loading from "@/components/loading/Loading02.vue";
+import Loading from "@/components/loading/Loading03.vue";
 const appStore = useAppStore();
 </script>
 
