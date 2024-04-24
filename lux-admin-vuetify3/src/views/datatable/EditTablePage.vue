@@ -23,7 +23,7 @@ const generateMessage = () => {
 
 const list = () => {
   let list = [] as any[];
-  list = Array.from({ length: 20 }, (value, index) => ({
+  list = Array.from({ length: 5 }, (value, index) => ({
     id: "#1000" + index + "",
     ...generateMessage(),
   }));

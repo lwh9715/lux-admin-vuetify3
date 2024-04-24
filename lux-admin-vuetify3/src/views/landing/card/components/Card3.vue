@@ -11,7 +11,7 @@
       <v-container>
         <v-row align="center">
           <v-col cols="12" md="4">
-            <div class="card">
+            <div class="card  my-10">
               <div class="wrapper">
                 <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image" />
               </div>
@@ -20,7 +20,7 @@
             </div>
           </v-col>
           <v-col cols="12" md="4">
-            <div class="card my-10">
+            <div class="card">
               <div class="wrapper">
                 <img src="@/assets/images/card2/yoimiya_bg.jpg" class="cover-image" />
               </div>
@@ -29,7 +29,7 @@
             </div>
           </v-col>
           <v-col cols="12" md="4">
-            <div class="card">
+            <div class="card  my-10">
               <div class="wrapper">
                 <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
               </div>
@@ -45,15 +45,15 @@
 
 <style scoped lang="scss">
 .card {
-  max-width: 400px;
-  height: 550px;
+  max-width: 300px;
+  height: 450px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding: 0 36px;
   perspective: 2500px;
-  margin: 300px auto;
+  margin: 290px auto 0 auto;
 }
 
 .cover-image {

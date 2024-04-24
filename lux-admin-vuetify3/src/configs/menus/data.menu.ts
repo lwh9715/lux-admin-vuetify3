@@ -6,11 +6,4 @@ export default [
     link: "/data/edit-table",
     key: "menu.data.editTable",
   },
-  // topic Photos Data
-  {
-    icon: "mdi-image-multiple-outline",
-    text: "File Upload Preview",
-    link: "/data/file-upload-preview",
-    key: "menu.data.fileUploadPreview",
-  },
 ];
