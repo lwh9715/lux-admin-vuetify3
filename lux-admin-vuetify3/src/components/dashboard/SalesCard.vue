@@ -3,23 +3,23 @@ import { Icon } from "@iconify/vue";
 
 const earningCardsData = [
   {
-    title: "Total Income",
+    title: "微博",
     img: "solar:bill-line-duotone",
     number: "1314",
   },
   {
-    title: "Total Expense",
+    title: "文案",
     img: "solar:layers-minimalistic-line-duotone",
     number: "23",
   },
   {
-    title: "Total Visitors",
-    img: "solar:users-group-two-rounded-line-duotone",
+    title: "用户",
+    img: "solar:user-circle-line-duotone",
     number: "22",
   },
   {
-    title: "Total Subscribers",
-    img: "solar:user-circle-line-duotone",
+    title: "日志",
+    img: "solar:users-group-two-rounded-line-duotone",
     number: "3",
   },
 ];
@@ -27,7 +27,8 @@ const earningCardsData = [
 <template>
   <div>
     <v-row>
-      <v-col cols="12" lg="3" sm="6" v-for="revenuecard in earningCardsData" :revenuecard="revenuecard" :key="revenuecard.title" class="py-0 mb-3">
+      <v-col cols="12" lg="3" sm="6" v-for="revenuecard in earningCardsData" :revenuecard="revenuecard"
+        :key="revenuecard.title" class="py-0 mb-3">
         <v-card elevation="10">
           <span class="lstick"></span>
           <v-card-text class="pa-5">

@@ -24,7 +24,7 @@ const customizeTheme = useCustomizeThemeStore();
       right: () => (customizeTheme.mainSidebar = true),
     }">
     <!-- <GlobalLoading /> -->
-    <ToolBox />
+<!--    <ToolBox />-->
     <div class="flex-fill">
       <slot></slot>
     </div>

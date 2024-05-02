@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SalesCard from "@/components/dashboard/SalesCard.vue";
+import LableCard from "@/components/dashboard/LableCard.vue";
 import TicketsCard from "@/components/dashboard/TicketsCard.vue";
 import TodoCard from "@/components/dashboard/TodoCard.vue";
 </script>
@@ -18,18 +19,24 @@ import TodoCard from "@/components/dashboard/TodoCard.vue";
     <!---Second Row -->
     <!-- ---------------------------------------------- -->
     <v-row class="card-shadow flex-grow-0" dense>
-      <v-col cols="6" xl="6">
+      <v-col cols="6" xl="12" style="padding: 4px 12px 4px 4px;">
         <!-- Target Card-->
-        <v-card class="card-shadow" height="550"><todo-card></todo-card></v-card>
+        <v-card class="card-shadow" height="610"><todo-card></todo-card></v-card>
       </v-col>
-      <v-col cols="6" xl="6">
-        <v-card class="card-shadow" height="550"><tickets-card></tickets-card>
+      <v-col cols="6" xl="12" style="padding: 4px 4px 4px 12px;">
+        <v-card class="card-shadow" height="610"><tickets-card></tickets-card>
         </v-card>
       </v-col>
     </v-row>
     <!-- ---------------------------------------------- -->
     <!---Third Row -->
     <!-- ---------------------------------------------- -->
+    <v-row class="flex-grow-0" style="margin-top: 20px;" dense>
+      <v-col cols="12" xl="12">
+        <!-- Sales Card -->
+        <lable-card></lable-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 <style lang="scss" scoped></style>

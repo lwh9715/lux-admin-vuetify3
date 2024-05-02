@@ -34,7 +34,7 @@ const customizeTheme = useCustomizeThemeStore();
     <div class="flex-fill">
       <slot></slot>
     </div>
-    <ToolBox />
+<!--    <ToolBox />-->
   </v-main>
 </template>
 

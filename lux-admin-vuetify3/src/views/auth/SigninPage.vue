@@ -29,7 +29,8 @@ const handleLogin = async () => {
         authStore.loginWithEmailAndPassword(email.value, password.value);
       } else {
         alert(authStore.isLoggedIn);
-        return;
+        isLoading.value = false;
+        isSignInDisabled.value = false;
       }
     });
 
@@ -79,16 +80,17 @@ const signInWithFacebook = () => {
 
     <v-card-text>
       <v-form ref="refLoginForm" class="text-left" v-model="isFormValid" lazy-validation>
-        <v-text-field ref="refEmail" v-model="email" required :error="error" :label="$t('login.email')" density="default"
-          variant="underlined" color="primary" bg-color="#fff" :rules="emailRules" name="email" outlined validateOn="blur"
-          placeholder="403474473@qq.com" @keyup.enter="handleLogin" @change="resetErrors"></v-text-field>
+        <v-text-field ref="refEmail" v-model="email" required :error="error" :label="$t('login.email')"
+          density="default" variant="underlined" color="primary" bg-color="#fff" :rules="emailRules" name="email"
+          outlined validateOn="blur" placeholder="403474473@qq.com" @keyup.enter="handleLogin"
+          @change="resetErrors"></v-text-field>
         <v-text-field ref="refPassword" v-model="password" :append-inner-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
           :type="showPassword ? 'text' : 'password'" :error="error" :error-messages="errorMessages"
           :label="$t('login.password')" placeholder="sfm12345" density="default" variant="underlined" color="primary"
           bg-color="#fff" :rules="passwordRules" name="password" outlined validateOn="blur" @change="resetErrors"
           @keyup.enter="handleLogin" @click:append-inner="showPassword = !showPassword"></v-text-field>
-        <v-btn :loading="isLoading" :disabled="isSignInDisabled" block size="x-large" color="primary" @click="handleLogin"
-          class="mt-2">{{ $t("login.button") }}</v-btn>
+        <v-btn :loading="isLoading" :disabled="isSignInDisabled" block size="x-large" color="primary"
+          @click="handleLogin" class="mt-2">{{ $t("login.button") }}</v-btn>
 
         <div class="text-grey text-center text-caption font-weight-bold text-uppercase my-5">
           {{ $t("login.orsign") }}

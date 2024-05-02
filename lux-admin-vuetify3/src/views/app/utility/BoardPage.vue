@@ -42,14 +42,16 @@
               class="flex-fill ma-1"
               size="small"
               @click="column.isAddVisible = !column.isAddVisible"
-              >Cancel</v-btn
+            >Cancel
+            </v-btn
             >
             <v-btn
               class="flex-fill ma-1"
               size="small"
               color="primary"
               @click="addCard(column)"
-              >Add</v-btn
+            >Add
+            </v-btn
             >
           </div>
         </v-card>
@@ -131,7 +133,8 @@
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn variant="plain" color="primary" @click="deleteDialog = false"
-          >Cancel</v-btn
+        >Cancel
+        </v-btn
         >
         <v-btn variant="flat" color="error" @click="deleteCard()">Delete</v-btn>
       </v-card-actions>
@@ -143,16 +146,16 @@ import VueDraggable from "vuedraggable";
 import BoardCard from "@/components/BoardCard.vue";
 
 const list1 = ref([
-  { title: "John", id: 1, description: "des" },
-  { title: "Joao", id: 2, description: "des" },
-  { title: "Jean", id: 3, description: "des" },
-  { title: "Gerard", id: 4, description: "des" },
+  {title: "John", id: 1, description: "des"},
+  {title: "Joao", id: 2, description: "des"},
+  {title: "Jean", id: 3, description: "des"},
+  {title: "Gerard", id: 4, description: "des"},
 ]);
 
 const list2 = ref([
-  { title: "Juan", id: 5, description: "des" },
-  { title: "Edgard", id: 6, description: "des" },
-  { title: "Johnson", id: 7, description: "des" },
+  {title: "Juan", id: 5, description: "des"},
+  {title: "Edgard", id: 6, description: "des"},
+  {title: "Johnson", id: 7, description: "des"},
 ]);
 
 const dragOptions = computed(() => {
@@ -249,7 +252,7 @@ const parseCards = (cards) => {
 
 // Add
 const addCard = (column) => {
-  const { addTitle, key } = column;
+  const {addTitle, key} = column;
   if (!addTitle) return;
   let newCard = {
     id: "_" + Math.random().toString(36).substring(2, 11),
@@ -328,11 +331,13 @@ watch(cards.value, (newCards) => {
 
 .board-item {
   transition: transform 0.2s;
+
   &:hover {
     transition: transform 0.2s;
     transform: translateY(-3px);
   }
 }
+
 .list-group {
   min-height: 100%;
 }
