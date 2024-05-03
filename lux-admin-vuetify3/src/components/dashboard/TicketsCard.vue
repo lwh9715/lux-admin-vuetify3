@@ -14,7 +14,7 @@ const headers = [
   { text: "链接", sortable: false, align: "right", value: "action" },
 ];
 
-const open = (item) => {};
+const open = (item) => { };
 
 const items = [];
 const initweiboHotYear = (item) => {

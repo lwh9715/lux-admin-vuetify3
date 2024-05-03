@@ -9,3 +9,13 @@ export const authLogin = query => {
   });
 };
 
+
+/** 用户列表 */
+export const userList = query => {
+  return userRequest({
+    url: '/user/list',
+    method: 'get',
+    params: query,
+    headers: { 'Authorization': localStorage.getItem("market_jungle_token") }
+  });
+};
