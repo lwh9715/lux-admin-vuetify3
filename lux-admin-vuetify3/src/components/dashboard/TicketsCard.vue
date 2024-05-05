@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { weiboHotYear } from "../../api/hotspotApi";
+import {weiboHotYear} from "../../api/hotspotApi";
 import CopyLabel from "@/components/common/CopyLabel.vue";
+
 const loading = ref(true);
 
 const headers = [
@@ -9,12 +10,13 @@ const headers = [
     sortable: false,
     value: "word",
   },
-  { text: "标识", value: "iconDesc" },
-  { text: "热度日期", value: "onboardTime" },
-  { text: "链接", sortable: false, align: "right", value: "action" },
+  {text: "标识", value: "iconDesc"},
+  {text: "热度日期", value: "onboardTime"},
+  {text: "链接", sortable: false, align: "right", value: "action"},
 ];
 
-const open = (item) => { };
+const open = (item) => {
+};
 
 const items = [];
 const initweiboHotYear = (item) => {
@@ -42,29 +44,30 @@ onMounted(() => {
   <div v-else>
     <v-table class="pa-3">
       <thead>
-        <tr>
-          <th class="text-left" v-for="header in headers" :key="header.text">
-            {{ header.text }}
-          </th>
-        </tr>
+      <tr>
+        <th class="text-left" v-for="header in headers" :key="header.text">
+          {{ header.text }}
+        </th>
+      </tr>
       </thead>
       <tbody>
-        <tr v-for="item in items.values" :key="item.mid">
-          <td>
-            <copy-label :text="item.word" />
-          </td>
-          <td>
-            <v-chip size="small" :color="item.iconDesc === '爆' ? 'pink' : 'primary'" class="font-weight-bold">
-              {{ item.iconDesc }}</v-chip>
-          </td>
+      <tr v-for="item in items.values" :key="item.mid">
+        <td>
+          <copy-label :text="item.word"/>
+        </td>
+        <td>
+          <v-chip size="small" :color="item.iconDesc === '爆' ? 'pink' : 'primary'" class="font-weight-bold">
+            {{ item.iconDesc }}
+          </v-chip>
+        </td>
 
-          <td>{{ item.onboardTime }}</td>
-          <td>
-            <v-btn elevation="4" variant="elevated" size="small" @click="open(item)">
-              Open Text
-            </v-btn>
-          </td>
-        </tr>
+        <td>{{ item.onboardTime }}</td>
+        <td>
+          <v-btn elevation="4" variant="elevated" size="small" @click="open(item)">
+            Open Text
+          </v-btn>
+        </td>
+      </tr>
       </tbody>
     </v-table>
   </div>
