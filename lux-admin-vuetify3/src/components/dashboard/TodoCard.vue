@@ -64,7 +64,7 @@ const getLabelColor = (id: string) => {
 
 <style lang="scss" scoped>
 .todo-list {
-  max-height: 400px;
+  max-height: 440px;
   overflow: scroll;
   .todo-item {
     transition: all 0.3s;

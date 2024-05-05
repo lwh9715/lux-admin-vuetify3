@@ -23,6 +23,20 @@ const todos = [
     completed: false,
     tags: ["work"],
   },
+  {
+    id: 4,
+    title: "Complete a project",
+    detail: "Finish the coding task before the deadline",
+    completed: false,
+    tags: ["Init"],
+  },
+  {
+    id: 5,
+    title: "Complete a project",
+    detail: "Finish the coding task before the deadline",
+    completed: false,
+    tags: ["work"],
+  },
 ];
 
 export const useTodoStore = defineStore({
