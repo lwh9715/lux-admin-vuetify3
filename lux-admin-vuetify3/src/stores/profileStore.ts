@@ -4,10 +4,10 @@ export const useProfileStore = defineStore({
   id: "userProfile",
   state: () => ({
     basic: {
-      username: "shirabako",
-      realname: "yang J. K.",
+      username: "amos",
+      realname: "amosliang",
       email: "amosliang77@gmail.com",
-      avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s",
+      avatar: "https://relax-dev.oss-cn-shanghai.aliyuncs.com/amos/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240505120619.png",
       location: "Tokyo,Japan",
       role: "Admin",
       disabled: false,

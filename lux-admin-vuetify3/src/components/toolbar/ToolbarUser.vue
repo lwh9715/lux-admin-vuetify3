@@ -1,7 +1,7 @@
 <!--
 * @Component: ToolbarNotifications
 * @Maintainer: J.K. Yang
-* @Description: 
+* @Description:
 -->
 <script setup lang="ts">
 import StatusMenu from "./StatusMenu.vue";
@@ -35,7 +35,7 @@ const navs = [
       <v-btn class="mx-2" icon v-bind="props">
         <v-badge content="2" color="success" dot bordered>
           <v-avatar size="40">
-            <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"></v-img>
+            <v-img src="https://relax-dev.oss-cn-shanghai.aliyuncs.com/amos/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240505120619.png"></v-img>
           </v-avatar>
         </v-badge>
       </v-btn>
@@ -48,12 +48,12 @@ const navs = [
         <v-list-item to="/profile">
           <template v-slot:prepend>
             <v-avatar size="40">
-              <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwrAiMevuwrbU9o0Ck2paVf4ufHUDb2dU48MEDrAlrQw&s"></v-img>
+              <v-img src="https://relax-dev.oss-cn-shanghai.aliyuncs.com/amos/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240505120619.png"></v-img>
             </v-avatar>
           </template>
 
           <v-list-item-title class="font-weight-bold text-primary">
-            AMOS J.K.
+            AMOS
             <StatusMenu />
           </v-list-item-title>
           <v-list-item-subtitle>
