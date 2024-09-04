@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import UserRoutes from "./user.routes";
 import AuthRoutes from "./auth.routes";
 import LandingRoutes from "./landing.routes";
-import AppsRoutes from "./apps.routes";
 import DataRoutes from "./data.routes";
 import AiRoutes from "./ai.routes";
 
@@ -29,7 +28,6 @@ export const routes = [
   ...UserRoutes,
   ...LandingRoutes,
   ...AuthRoutes,
-  ...AppsRoutes,
   ...DataRoutes,
   ...AiRoutes,
 ];

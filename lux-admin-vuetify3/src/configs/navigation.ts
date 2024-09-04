@@ -1,4 +1,3 @@
-import menuApps from "./menus/apps.menu";
 import menuPages from "./menus/pages.menu";
 import menuLanding from "./menus/landing.menu";
 import menuData from "./menus/data.menu";
@@ -17,10 +16,6 @@ export default {
           icon: "mdi-view-dashboard-outline",
         },
       ],
-    },
-    {
-      text: "Apps",
-      items: menuApps,
     },
     {
       text: "Data",
